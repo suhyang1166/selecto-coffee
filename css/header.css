@@ -55,11 +55,19 @@
   height: 50px;
   margin: 0 40px;
 }
-.menu_list > a {
+.menu_list.active_menu > a {
   color: #ff4713;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 50px;
+  text-decoration: none;
+}
+.menu_list > a {
+  color: gray;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 50px;
+  text-decoration: line-through;
 }
 .menu:hover ~ .pc_link > #pcLinkButton {
   background: #fff;
@@ -127,11 +135,20 @@
   line-height: 50px;
 }
 
-.hidden_list_link {
+.active_menu .hidden_list_link {
   color: #ff4713;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.hidden_list_link {
+  color: gray;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: line-through;
 }
 
 /*mobile box*/
@@ -181,7 +198,7 @@
   width: 100%;
   align-items: center;
 }
-.mobile_menu_title {
+.mobile_menu_title.active_menu {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -189,6 +206,21 @@
   font-weight: 600;
   color: #ff4713;
   margin-bottom: 20px;
+  text-decoration: none;
+}
+.mobile_menu_title.active_menu > a {
+  color: #ff4713;
+  text-decoration: none;
+}
+.mobile_menu_title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  color: gray;
+  margin-bottom: 20px;
+  text-decoration: line-through;
 }
 
 .menu_arrow {
@@ -212,11 +244,19 @@
   display: flex;
 }
 
-.mobile_menu_list a {
+.mobile_menu_list.active_menu > a {
   font-size: 12px;
   padding: 5px;
   margin-bottom: 7px;
   color: #ff4713;
+  text-decoration: none;
+}
+.mobile_menu_list a {
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 7px;
+  color: gray;
+  text-decoration: line-through;
 }
 
 .mobile_link {
